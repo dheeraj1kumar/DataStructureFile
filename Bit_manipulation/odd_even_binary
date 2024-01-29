@@ -1,0 +1,23 @@
+public odd_even_binary{
+    public static void main(String[] args) {
+
+
+        //odd=LSB=1
+        //even=LSB=0
+
+        int n=5;
+
+        if((n&1)==0){
+            System.out.println("even");
+
+
+
+        }
+        else{
+            System.out.println("odd");
+            
+
+        }
+        
+    }
+}

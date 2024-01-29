@@ -1,0 +1,71 @@
+
+//all path from source to target
+import java.util.*;
+import java.util.LinkedList;
+
+public class g10 {
+
+    static class Edge {
+        int src;
+        int dest;
+        int wt;
+
+        public Edge(int s, int d, int w) {
+            this.src = s;
+            this.dest = d;
+            this.wt = w;
+        }
+    }
+
+    static void creatGraph(ArrayList<Edge> graph[]) {
+        for (int i = 0; i < graph.length; i++) {
+            graph[i] = new ArrayList<>();
+        }
+
+        // 0-vertex
+        // graph[0].add(new Edge(0, 1, 1));
+        // graph[0].add(new Edge(0, 2, 1));
+        graph[0].add(new Edge(0, 3, 1));
+
+        // // 1 vertex
+        // graph[1].add(new Edge(1, 0, 1));
+        // graph[1].add(new Edge(1, 2, 1));
+
+        graph[2].add(new Edge(2, 3, 1));
+
+        graph[3].add(new Edge(3, 1, 1));
+
+        // vertex 3
+        graph[4].add(new Edge(4, 0, 1));
+        graph[4].add(new Edge(4, 1, 1));
+
+        // vertex 4
+
+        graph[5].add(new Edge(4, 0, 1));
+        graph[5].add(new Edge(4, 2, 1));
+
+    }
+
+    public static void printAllpath(ArrayList<Edge> graph[], int src, int dest, String path) {
+        if (src == dest) {
+            System.out.println(path + dest);
+            return;
+        }
+        for (int i = 0; i < graph[src].size(); i++) {
+            Edge e = graph[src].get(i);
+            printAllpath(graph, e.dest, dest, path + src);
+        }
+    }
+
+    public static void main(String[] args) {
+
+        int v = 6;
+        // int arr[]=new arr[v]
+        ArrayList<Edge>[] graph = new ArrayList[v];// null-->empty arrayList
+
+        creatGraph(graph);
+        int src = 5, dest = 1;
+        printAllpath(graph, src, dest, "");
+
+    }
+}

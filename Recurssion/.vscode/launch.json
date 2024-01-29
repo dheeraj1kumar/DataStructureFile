@@ -1,0 +1,57 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Launch re11",
+      "request": "launch",
+      "mainClass": "re11",
+      "projectName": "Recurssion_8ece510e"
+    },
+    {
+      "type": "java",
+      "name": "Launch re10",
+      "request": "launch",
+      "mainClass": "re10",
+      "projectName": "Recurssion_8ece510e"
+    },
+    {
+      "type": "java",
+      "name": "Launch re9",
+      "request": "launch",
+      "mainClass": "re9",
+      "projectName": "Recurssion_8ece510e"
+    },
+    {
+      "type": "java",
+      "name": "Launch Current File",
+      "request": "launch",
+      "mainClass": "${file}"
+    },
+    {
+      "type": "java",
+      "name": "Launch Java Program",
+      "request": "launch",
+      "mainClass": ""
+    },
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "cppdbg",
+      "request": "launch",
+      "args": [],
+      "stopAtEntry": false,
+      "externalConsole": true,
+      "cwd": "d:/javarun/Java_Programing/Recurssion",
+      "program": "d:/javarun/Java_Programing/Recurssion/build/Debug/outDebug",
+      "MIMode": "gdb",
+      "miDebuggerPath": "gdb",
+      "setupCommands": [
+        {
+          "description": "Enable pretty-printing for gdb",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        }
+      ]
+    }
+  ]
+}
